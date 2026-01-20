@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Invaders — Arcade Demo</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <!-- CRT overlay opcional (si lo usas en CSS) -->
+  <div class="crt" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">SPACE INVADERS<span>ARCADE MENU DEMO</span></a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#media">Media</a>
+      <a href="#beta">Beta</a>
+      <a class="nav-cta" href="demo/demo.html">Play</a>
+    </nav>
+  </header>
+
+  <main id="top" class="page">
+
+    <!-- GAME CARD (lo primero que ves, rollo itch) -->
+    <section class="game-card">
+      <div class="game-cover">
+        <!-- Aquí luego puedes poner una imagen real -->
+        <div class="cover-placeholder">
+          SPACE<br>INVADERS
+          <small>ARCADE EDITION</small>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <h1>SPACE INVADERS: ARCADE EDITION</h1>
+        <p class="tagline">
+          Retro shooter inspirado en los clásicos de los 80. 4 naves · 4 mapas · 3 dificultades.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="demo/demo.html">Play</a>
+          <a class="btn ghost" href="#about">Scroll for info</a>
+        </div>
+
+        <ul class="meta">
+          <li><b>Género:</b> Arcade / Shooter</li>
+          <li><b>Modo:</b> Singleplayer</li>
+          <li><b>Estado:</b> Demo UI</li>
+          <li><b>Plataforma:</b> Web</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESTO (al bajar) -->
+    <section id="about" class="block">
+      <h2>About</h2>
+      <p>
+        Space Invaders: Arcade Edition es una reinterpretación visual de los menús clásicos
+        de recreativa. Esta web incluye una landing estilo “store page” y una demo interactiva
+        de menús ingame (opciones, selección de nave y mapa, etc.).
+      </p>
+    </section>
+
+    <section id="features" class="block">
+      <h2>Features</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Main Menu</h3>
+          <p>Menú principal con acceso a opciones, naves, mapas, controles y highscores.</p>
+        </article>
+
+        <article class="card">
+          <h3>High Scores</h3>
+          <p>Tabla estilo arcade con colores por ranking, como en los clásicos de los 80.</p>
+        </article>
+
+        <article class="card">
+          <h3>4 Ships / 4 Maps</h3>
+          <p>Selección rápida con panel desplegable. Feedback visual de selección.</p>
+        </article>
+
+        <article class="card">
+          <h3>Options</h3>
+          <p>Volumen, dificultad e idioma, con controles interactivos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="media" class="block">
+      <h2>Media</h2>
+
+      <!-- Puedes mantener slideshow si quieres -->
+      <div class="slideshow">
+        <div class="slide active"><div class="slide-box">SCREEN 01 — MAIN MENU</div></div>
+        <div class="slide"><div class="slide-box">SCREEN 02 — OPTIONS</div></div>
+        <div class="slide"><div class="slide-box">SCREEN 03 — SHIP / MAP</div></div>
+
+        <div class="slide-controls">
+          <button class="btn small ghost" id="prevSlide" type="button">◀</button>
+          <div class="dots">
+            <button class="dot active" data-i="0" type="button" aria-label="Slide 1"></button>
+            <button class="dot" data-i="1" type="button" aria-label="Slide 2"></button>
+            <button class="dot" data-i="2" type="button" aria-label="Slide 3"></button>
+          </div>
+          <button class="btn small ghost" id="nextSlide" type="button">▶</button>
+        </div>
+      </div>
+
+      <p class="note">
+        *Sustituye estas pantallas por capturas reales cuando tengas la demo lista.
+      </p>
+    </section>
+
+    <section id="beta" class="block">
+      <h2>Join the Beta</h2>
+
+      <form class="beta-form" id="betaForm" novalidate>
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required minlength="2">
+          <small class="error" data-for="name"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@email.com" required>
+          <small class="error" data-for="email"></small>
+        </div>
+
+        <div class="field">
+          <label for="platform">Plataforma</label>
+          <select id="platform" name="platform" required>
+            <option value="">Elige una…</option>
+            <option>PC</option>
+            <option>Mac</option>
+            <option>Linux</option>
+          </select>
+          <small class="error" data-for="platform"></small>
+        </div>
+
+        <label class="check">
+          <input id="terms" name="terms" type="checkbox" required>
+          Acepto recibir info de la beta
+        </label>
+        <small class="error" data-for="terms"></small>
+
+        <button class="btn primary" type="submit">Request Access</button>
+        <p class="form-ok" id="formOk" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Space Invaders — Web Demo UI</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

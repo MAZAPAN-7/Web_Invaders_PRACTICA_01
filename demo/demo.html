@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Invaders — Demo Menu</title>
+
+  <link rel="stylesheet" href="../css/demo.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <div class="crt" aria-hidden="true"></div>
+
+  <main class="menu-layout">
+
+    <!-- TÍTULO (arriba, centrado) -->
+    <header class="title-box">
+      <h1>SPACE INVADERS</h1>
+      <p>ARCADE MENU DEMO</p>
+    </header>
+
+    <!-- HIGH SCORES (izquierda) -->
+    <aside class="scores-box" aria-label="Highscores">
+      <h2>High Scores</h2>
+      <ol class="scores">
+        <li data-rank="1">AAA — 403980</li>
+        <li data-rank="2">BBB — 302450</li>
+        <li data-rank="3">CCC — 299620</li>
+        <li data-rank="4">DDD — 291550</li>
+        <li data-rank="5">EEE — 279210</li>
+        <li data-rank="6">FFF — 270050</li>
+        <li data-rank="7">GGG — 264620</li>
+        <li data-rank="8">HHH — 255250</li>
+        <li data-rank="9">III — 237920</li>
+        <li data-rank="10">JJJ — 230750</li>
+      </ol>
+      <p class="insert-coin">CREDIT 00 • INSERT COIN</p>
+    </aside>
+
+    <!-- MENÚ PRINCIPAL (centrado) -->
+    <section class="buttons-box" aria-label="Menú principal">
+      <button class="menu-btn" id="newGame" type="button">New Game</button>
+      <button class="menu-btn" id="continueGame" type="button">Continue</button>
+      <button class="menu-btn danger" id="quit" type="button">Quit</button>
+    </section>
+
+    <!-- SHIP (arriba derecha) -->
+    <div class="ship-box">
+      <button class="small-btn ship" data-panel="ships" type="button">Ship ▾</button>
+      <p class="picked">Selected: <span id="pickedShip">Ship 1</span></p>
+    </div>
+
+    <!-- MAP (debajo derecha) -->
+    <div class="map-box">
+      <button class="small-btn map" data-panel="maps" type="button">Map ▾</button>
+      <p class="picked">Selected: <span id="pickedMap">Map 1</span></p>
+    </div>
+
+    <!-- OPTIONS + CONTROLS (abajo derecha, fijo) -->
+    <div class="options-box">
+      <button class="small-btn opt" data-panel="options" type="button">Options</button>
+      <button class="small-btn opt" data-panel="controls" type="button">Controls</button>
+    </div>
+
+    <!-- PANEL: SHIPS -->
+    <section class="panel" id="panel-ships" aria-label="Ship Select">
+      <h3>Select Ship</h3>
+      <div class="grid">
+        <button class="card" data-ship="Ship 1" type="button">Ship 1</button>
+        <button class="card" data-ship="Ship 2" type="button">Ship 2</button>
+        <button class="card" data-ship="Ship 3" type="button">Ship 3</button>
+        <button class="card" data-ship="Ship 4" type="button">Ship 4</button>
+      </div>
+      <button class="close" type="button">Close</button>
+    </section>
+
+    <!-- PANEL: MAPS -->
+    <section class="panel" id="panel-maps" aria-label="Map Select">
+      <h3>Select Map</h3>
+      <div class="grid">
+        <button class="card" data-map="Map 1" type="button">Map 1</button>
+        <button class="card" data-map="Map 2" type="button">Map 2</button>
+        <button class="card" data-map="Map 3" type="button">Map 3</button>
+        <button class="card" data-map="Map 4" type="button">Map 4</button>
+      </div>
+      <button class="close" type="button">Close</button>
+    </section>
+
+    <!-- PANEL: OPTIONS -->
+    <section class="panel" id="panel-options" aria-label="Options">
+      <h3>Options</h3>
+
+      <label for="musicVol">Music Volume</label>
+      <input id="musicVol" type="range" min="0" max="100" value="50" />
+      <p class="value">Value: <span id="musicVolValue">50</span>%</p>
+
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty">
+        <option>Easy</option>
+        <option selected>Normal</option>
+        <option>Hard</option>
+      </select>
+
+      <label for="language">Language</label>
+      <select id="language">
+        <option>ES</option>
+        <option>EN</option>
+      </select>
+
+      <button class="close" type="button">Close</button>
+    </section>
+
+    <!-- PANEL: CONTROLS -->
+    <section class="panel" id="panel-controls" aria-label="Controls">
+      <h3>Controls</h3>
+      <ul class="controls-list">
+        <li>Move: ← →</li>
+        <li>Shoot: SPACE</li>
+        <li>Pause: P</li>
+      </ul>
+
+      <button class="close" type="button">Close</button>
+    </section>
+
+  </main>
+
+  <script src="../js/demo.js"></script>
+</body>
+</html>
