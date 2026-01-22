@@ -14,13 +14,13 @@
 
   <main class="menu-layout">
 
-    <!-- TÍTULO (arriba, centrado) -->
+    <!-- TÍTULO -->
     <header class="title-box">
       <h1>SPACE INVADERS</h1>
       <p>ARCADE MENU DEMO</p>
     </header>
 
-    <!-- HIGH SCORES (izquierda) -->
+    <!-- HIGH SCORES -->
     <aside class="scores-box" aria-label="Highscores">
       <h2>High Scores</h2>
       <ol class="scores">
@@ -38,20 +38,38 @@
       <p class="insert-coin">CREDIT 00 • INSERT COIN</p>
     </aside>
 
-    <!-- MENÚ PRINCIPAL (centrado) -->
+    <!-- PREVIEW -->
+     <section class="preview-box" aria-label="Selected preview">
+        <div class="preview ship-preview">
+          <span class="preview-label">ship</span>
+          <div class="preview-image" id="shipPreview">
+            <img src="" alt="selected ship">
+          </div>
+
+        </div>
+        <div class="preview map-preview">
+          <span class="preview-label">ship</span>
+          <div class="preview-image" id="mapPreview">
+            <img src="" alt="selected map">
+          </div>
+
+        </div>
+     </section>
+
+    <!-- MENÚ PRINCIPAL -->
     <section class="buttons-box" aria-label="Menú principal">
       <button class="menu-btn" id="newGame" type="button">New Game</button>
       <button class="menu-btn" id="continueGame" type="button">Continue</button>
       <button class="menu-btn danger" id="quit" type="button">Quit</button>
     </section>
 
-    <!-- SHIP (arriba derecha) -->
+    <!-- SHIP -->
     <div class="ship-box">
       <button class="small-btn ship" data-panel="ships" type="button">Ship ▾</button>
       <p class="picked">Selected: <span id="pickedShip">Ship 1</span></p>
     </div>
 
-    <!-- MAP (debajo derecha) -->
+    <!-- MAP -->
     <div class="map-box">
       <button class="small-btn map" data-panel="maps" type="button">Map ▾</button>
       <p class="picked">Selected: <span id="pickedMap">Map 1</span></p>

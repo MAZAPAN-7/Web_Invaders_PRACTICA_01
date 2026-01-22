@@ -6,7 +6,7 @@
   --text: rgba(255,255,255,0.92);
   --muted: rgba(255,255,255,0.72);
 
-  --accent: rgba(0, 255, 120, 0.95);      /* verde arcade */
+  --accent: rgba(0, 255, 120, 0.95);      
   --accentSoft: rgba(0, 255, 120, 0.18);
   --danger: rgba(255, 70, 140, 0.95);
 }

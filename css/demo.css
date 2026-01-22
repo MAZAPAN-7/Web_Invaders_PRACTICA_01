@@ -206,12 +206,12 @@ body::after{
 .scores li[data-rank="2"]{ color: rgba(200, 240, 255, 0.98); text-shadow: 0 0 12px rgba(90,230,255,0.12); }
 .scores li[data-rank="3"]{ color: rgba(255, 170, 120, 0.98); text-shadow: 0 0 12px rgba(255,170,120,0.12); }
 
-.scores li[data-rank="4"]{ color: rgba(255,255,255,0.92); }
-.scores li[data-rank="5"]{ color: rgba(255, 240, 120, 0.95); }
-.scores li[data-rank="6"]{ color: rgba(255, 120, 200, 0.95); }
+.scores li[data-rank="4"]{ color: rgba(160, 255, 200, 0.95); }
+.scores li[data-rank="5"]{ color: rgba(160, 255, 200, 0.95); }
+.scores li[data-rank="6"]{ color: rgba(90, 230, 255, 0.95); }
 .scores li[data-rank="7"]{ color: rgba(90, 230, 255, 0.95); }
-.scores li[data-rank="8"]{ color: rgba(160, 255, 200, 0.95); }
-.scores li[data-rank="9"]{ color: rgba(255, 190, 120, 0.95); }
+.scores li[data-rank="8"]{ color: rgba(255, 240, 120, 0.95); }
+.scores li[data-rank="9"]{ color: rgba(255, 240, 120, 0.95); }
 .scores li[data-rank="10"]{ color: rgba(255, 120, 120, 0.95); }
 
 /* ===== MAIN MENU (center) ===== */
@@ -256,7 +256,7 @@ body::after{
     inset 0 0 18px rgba(255,255,255,0.05);
 }
 
-/* Quit: magenta */
+/* Quit */
 .menu-btn.danger{
   border-color: rgba(255,90,200,0.18);
   box-shadow:
@@ -273,7 +273,7 @@ body::after{
     inset 0 0 18px rgba(255,255,255,0.05);
 }
 
-/* ===== SHIP & MAP (right column) ===== */
+/* ===== SHIP & MAP ===== */
 .ship-box,
 .map-box{
   grid-column: 3;
@@ -300,7 +300,28 @@ body::after{
   font-weight: 900;
 }
 
-/* Small buttons base */
+/* ==== PREVIEW ==== */
+
+.preview-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.preview-image{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+
+/* botones pequeños */
 .small-btn{
   padding: 12px 16px;
   border-radius: 14px;

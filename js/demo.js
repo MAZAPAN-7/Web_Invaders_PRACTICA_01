@@ -36,13 +36,15 @@ $('#musicVol').on('input', function(){
 });
 
 $('#newGame').on('click', function(){
-  alert('New Game (demo)');
+  alert('En Construccion... 🏗️');
 });
 
 $('#continueGame').on('click', function(){
-  alert('Continue (demo)');
+  alert('En Construccion... 🏗️');
 });
 
 $('#quit').on('click', function(){
-  alert('Quit (demo)');
+  $('body').fadeOut(300, function(){
+    window.location.href = "../index.html";
+  });
 });
