@@ -313,12 +313,22 @@ body::after{
   overflow: hidden;
 }
 
-.preview-image{
+/* La imagen de verdad */
+.preview-image img{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  display: none; /* se activa cuando haya selección */
 }
 
+/* Texto placeholder (cuando aún no hay imagen) */
+.preview-image .placeholder{
+  position: absolute;
+  color: rgba(255,255,255,0.45);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
 
 /* botones pequeños */

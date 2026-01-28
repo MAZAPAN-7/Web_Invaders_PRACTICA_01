@@ -48,3 +48,13 @@ $('#betaForm').on('submit', function(e){
     this.reset();
   }
 });
+
+
+$('.fly').on('animationiteration', function () {
+  const left = Math.floor(Math.random() * 90) + 5;
+  const dur = (18 + Math.random() * 18).toFixed(1); // 18..36s
+  $(this).css({
+    left: left + '%',
+    animationDuration: dur + 's'
+  });
+});
