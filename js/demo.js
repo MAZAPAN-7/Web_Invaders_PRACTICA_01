@@ -27,9 +27,11 @@ const shipImages = {
   "Ship 4": "../assets/Nave4L.png",
 };
 
-// (por ahora no tienes mapas -> lo dejamos preparado)
 const mapImages = {
-  // "Map 1": "../assets/maps/Map1.png",
+  "Map 1": "../assets/Map1.png",
+  "Map 2": "../assets/Map2.png",
+  "Map 3": "../assets/Map3.png",
+  "Map 4": "../assets/Map4.png",
 };
 
 function setShipPreview(shipName){

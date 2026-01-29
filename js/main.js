@@ -51,10 +51,20 @@ $('#betaForm').on('submit', function(e){
 
 
 $('.fly').on('animationiteration', function () {
-  const left = Math.floor(Math.random() * 90) + 5;
-  const dur = (18 + Math.random() * 18).toFixed(1); // 18..36s
-  $(this).css({
-    left: left + '%',
-    animationDuration: dur + 's'
+  const $el = $(this);
+  $el.css('animation-play-state', 'paused');
+
+  const left = Math.floor(Math.random() * 84) + 8;
+  const scale = (Math.random() * 0.25 + 0.75).toFixed(2);
+  const opacity = (Math.random() * 0.20 + 0.18).toFixed(2);
+
+  $el.css ({
+    left: left + '%'
   });
+
+  $el[0].style.setProperty('--scale', scale);
+  $el[0].style.setProperty('--op', opacity);
+
+  void this.offsetHeight;
+  $el.css('animation-play-state', 'running');
 });

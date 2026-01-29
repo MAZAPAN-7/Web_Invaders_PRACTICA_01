@@ -6,6 +6,7 @@
   <title>Space Invaders — Arcade Demo</title>
 
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
@@ -70,7 +71,7 @@
       </div>
     </section>
 
-    <!-- RESTO (al bajar) -->
+    <!-- RESTO -->
     <section id="about" class="block">
       <h2>About</h2>
       <p>
@@ -78,7 +79,7 @@
       </p>
     </section>
 
-    <section id="features" class="block">
+    <section id="features" class="block" data-aos="zoom-out-right">
       <h2>Features</h2>
 
       <div class="cards">
@@ -104,10 +105,10 @@
       </div>
     </section>
 
-    <section id="media" class="block">
+    <section id="media" class="block" data-aos="zoom-out-left">
       <h2>Media</h2>
 
-      <!-- Puedes mantener slideshow si quieres -->
+      <!-- Slideshow -->
       <div class="slideshow">
         <div class="slide active"><div class="slide-box">SCREEN 01 — MAIN MENU</div></div>
         <div class="slide"><div class="slide-box">SCREEN 02 — OPTIONS</div></div>
@@ -125,7 +126,7 @@
       </div>
     </section>
 
-    <section id="beta" class="block">
+    <section id="beta" class="block" data-aos="zoom-out-right">
       <h2>Join the Beta</h2>
 
       <form class="beta-form" id="betaForm" novalidate>
@@ -170,6 +171,10 @@
     <a href="#top">Back to top ↑</a>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
