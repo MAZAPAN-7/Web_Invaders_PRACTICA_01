@@ -43,13 +43,11 @@
       <div class="preview ship-preview">
         <div class="preview-image" id="shipPreview">
           <img src="" alt="selected ship">
-          <span class="placeholder">No ship selected</span>
         </div>
       </div>
       <div class="preview map-preview">
         <div class="preview-image" id="mapPreview">
           <img src="" alt="selected map">
-          <span class="placeholder">No map selected</span>
         </div>
       </div>
     </section>
@@ -61,16 +59,15 @@
       <button class="menu-btn danger" id="quit" type="button">Quit</button>
     </section>
 
-    <!-- SHIP -->
-    <div class="ship-box">
-      <button class="small-btn ship" data-panel="ships" type="button">Ship ▾</button>
-      <p class="picked">Selected: <span id="pickedShip">Ship 1</span></p>
-    </div>
-
-    <!-- MAP -->
-    <div class="map-box">
-      <button class="small-btn map" data-panel="maps" type="button">Map ▾</button>
-      <p class="picked">Selected: <span id="pickedMap">Map 1</span></p>
+    <div class="selection-box">
+      <div class="ship-box">
+        <button class="small-btn ship" data-panel="ships" type="button">Ship ▾</button>
+        <p class="picked">Selected: <span id="pickedShip">Ship 1</span></p>
+      </div>
+      <div class="map-box">
+        <button class="small-btn map" data-panel="maps" type="button">Map ▾</button>
+        <p class="picked">Selected: <span id="pickedMap">Map 1</span></p>
+      </div>
     </div>
 
     <!-- OPTIONS + CONTROLS (abajo derecha, fijo) -->

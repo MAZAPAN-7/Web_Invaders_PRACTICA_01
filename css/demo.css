@@ -44,27 +44,6 @@ body{
     linear-gradient(180deg, var(--bg1), var(--bg0));
 }
 
-/* CRT overlay (scanlines + vignette + film grain) */
-/* .crt{
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    repeating-linear-gradient(to bottom,
-      rgba(255,255,255,0.028) 0px,
-      rgba(255,255,255,0.028) 1px,
-      rgba(0,0,0,0.00) 2px,
-      rgba(0,0,0,0.00) 4px
-    ),
-    radial-gradient(circle at 50% 45%,
-      rgba(0,0,0,0) 0%,
-      rgba(0,0,0,0.35) 55%,
-      rgba(0,0,0,0.78) 100%
-    );
-  opacity: 0.55;
-  mix-blend-mode: overlay;
-} */
-
 /* Grain */
 body::before{
   content:"";
@@ -123,12 +102,16 @@ body::after{
   text-transform: uppercase;
   font-weight: 950;
 
-  /* “Neon tube” text */
-  color: rgba(140, 255, 200, 0.95);
-  text-shadow:
-    0 0 10px rgba(140,255,200,0.28),
-    0 0 26px rgba(90,230,255,0.18),
-    0 0 44px rgba(255,90,200,0.10);
+  background: linear-gradient(
+    to top,
+    rgba(212,52,12,1) 0%,
+    rgba(255,120,60,1) 35%,
+    rgba(200,80,255,1) 65%,
+    rgba(56,0,161,1) 100%
+  );
+   
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title-box p{
@@ -142,6 +125,9 @@ body::after{
 
 /* ===== HIGHSCORES (cabinet vibe) ===== */
 .scores-box{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
   grid-column: 1;
   align-self: start;
   height: fit-content;
@@ -274,19 +260,16 @@ body::after{
 }
 
 /* ===== SHIP & MAP ===== */
-.ship-box,
-.map-box{
+.selection-box{
   grid-column: 3;
   grid-row: 2;
-  justify-self: end;
-
   display:flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 10px;
 }
 
 .ship-box{ align-self: start; margin-top: 10px; }
-.map-box{ align-self: start; margin-top: 140px; }
+.map-box{ align-self: start; margin-top: 50px; }
 
 .picked{
   margin: 0;
@@ -306,25 +289,20 @@ body::after{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  gap: 100;
+  justify-content: center;
 }
 
-/* La imagen de verdad */
+.preview-image {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .preview-image img{
   max-width: 50%;
   max-height: 50%;
   object-fit: contain;
-  display: none; /* se activa cuando haya selección */
-}
-
-/* Texto placeholder (cuando aún no hay imagen) */
-.preview-image .placeholder{
-  position: absolute;
-  color: rgba(255,255,255,0.45);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  display: none; 
+  border-radius: 12px;
 }
 
 
@@ -352,7 +330,7 @@ body::after{
   transform: translateY(-1px);
 }
 
-/* Ship: amber (tipo signage) */
+/* Ship */
 .small-btn.ship{
   border-color: rgba(255,190,80,0.22);
   color: rgba(255, 220, 120, 0.95);
@@ -369,7 +347,7 @@ body::after{
     inset 0 0 16px rgba(255,255,255,0.04);
 }
 
-/* Map: magenta (vibe neón) */
+/* Map */
 .small-btn.map{
   border-color: rgba(255,90,200,0.22);
   color: rgba(255, 160, 220, 0.95);
