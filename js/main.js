@@ -7,18 +7,53 @@ $('.nav-toggle').on('click', function () {
 
 // Slideshow
 let currentSlide = 0;
-const $slides = $('.slide');
-const $dots = $('.dot');
+const $slides = $('.slides-track .slide');
+const $dotsContainer = $('.dots');
+
+function mod(n, m){ return ((n % m) + m) % m; }
+
+function buildDots(){
+  $dotsContainer.empty();
+  for(let i=0; i<$slides.length; i++){
+    const $b = $('<button/>', {
+      class: 'dot' + (i === currentSlide ? ' active' : ''),
+      type: 'button',
+      'aria-label': `Slide ${i+1}`
+    }).attr('data-i', i);
+    $dotsContainer.append($b);
+  }
+}
+
+function renderSlides(){
+  const left = mod(currentSlide - 1, $slides.length);
+  const right = mod(currentSlide + 1, $slides.length);
+
+  $slides
+    .removeClass('is-left is-center is-right is-hidden')
+    .addClass('is-hidden');
+
+  $slides.eq(left).removeClass('is-hidden').addClass('is-left');
+  $slides.eq(currentSlide).removeClass('is-hidden').addClass('is-center');
+  $slides.eq(right).removeClass('is-hidden').addClass('is-right');
+
+  $('.dot').removeClass('active').eq(currentSlide).addClass('active');
+}
 
 function showSlide(i){
-  currentSlide = (i + $slides.length) % $slides.length;
-  $slides.removeClass('active').eq(currentSlide).addClass('active');
-  $dots.removeClass('active').eq(currentSlide).addClass('active');
+  currentSlide = mod(i, $slides.length);
+  renderSlides();
 }
 
 $('#prevSlide').on('click', () => showSlide(currentSlide - 1));
 $('#nextSlide').on('click', () => showSlide(currentSlide + 1));
-$dots.on('click', function(){ showSlide(parseInt($(this).data('i'), 10)); });
+
+$dotsContainer.on('click', '.dot', function(){
+  showSlide(parseInt($(this).attr('data-i'), 10));
+});
+
+// Init
+buildDots();
+renderSlides();
 
 // Form
 function setError(field, msg){

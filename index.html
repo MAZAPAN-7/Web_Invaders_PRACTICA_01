@@ -110,21 +110,26 @@
 
       <!-- Slideshow -->
       <div class="slideshow">
-        <div class="slide active"><div class="slide-box">SCREEN 01 — MAIN MENU</div></div>
-        <div class="slide"><div class="slide-box">SCREEN 02 — OPTIONS</div></div>
-        <div class="slide"><div class="slide-box">SCREEN 03 — SHIP / MAP</div></div>
+        <div class="slides-track">
+          <div class="slide">
+            <img class="slide-img" src="assets/Nave1L.png" alt="Nave 1">
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="assets/Map1.png" alt="Mapa 1">
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="assets/Map2.png" alt="Mapa 2">
+          </div>
+          <!-- aquí puedes añadir más slides -->
+        </div>
 
         <div class="slide-controls">
           <button class="btn small ghost" id="prevSlide" type="button">◀</button>
-          <div class="dots">
-            <button class="dot active" data-i="0" type="button" aria-label="Slide 1"></button>
-            <button class="dot" data-i="1" type="button" aria-label="Slide 2"></button>
-            <button class="dot" data-i="2" type="button" aria-label="Slide 3"></button>
-          </div>
+          <div class="dots"></div>
           <button class="btn small ghost" id="nextSlide" type="button">▶</button>
         </div>
       </div>
-    </section>
+
 
     <section id="beta" class="block" data-aos="zoom-out-right">
       <h2>Join the Beta</h2>
