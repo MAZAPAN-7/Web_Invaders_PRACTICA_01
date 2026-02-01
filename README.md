@@ -50,12 +50,9 @@ La estética está inspirada en:
 - Salones recreativos clásicos
 - Máquinas arcade
 - Neones, luces de tubo y cartelería retro
-- Ambientes tipo *Stranger Things*
 
 Características visuales:
 - Paleta neón (amarillo arcade, magenta, cian)
-- Efecto CRT (scanlines, grano, viñeteado)
-- Glow animado en el título
 - Texto “INSERT COIN” parpadeante estilo recreativa
 
 ---

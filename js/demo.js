@@ -19,7 +19,7 @@ $(document).on('keydown', function(e){
   if(e.key === 'Escape') closePanels();
 });
 
-// --- Preview helpers ---
+// --- Preview ---
 const shipImages = {
   "Ship 1": "../assets/Nave1L.png",
   "Ship 2": "../assets/Nave2L.png",

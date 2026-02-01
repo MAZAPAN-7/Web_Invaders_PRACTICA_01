@@ -84,7 +84,7 @@ $('#betaForm').on('submit', function(e){
   }
 });
 
-
+// Animaciones naves
 $('.fly').on('animationiteration', function () {
   const $el = $(this);
   $el.css('animation-play-state', 'paused');
